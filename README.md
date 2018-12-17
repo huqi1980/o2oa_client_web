@@ -1,6 +1,6 @@
 # O2OA Web Client
 
-[![Build Status](https://travis-ci.org/mootools/mootools-core.png?branch=master)](https://travis-ci.org/mootools/mootools-core)
+[![Build Status](https://travis-ci.com/huqi1980/o2oa_client_web.svg?branch=master)](https://travis-ci.org/huqi1980/o2oa_client_web)
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/MooTools-Core.svg)](https://saucelabs.com/u/MooTools-Core)
 
