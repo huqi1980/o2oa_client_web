@@ -1,4 +1,4 @@
-# MooTools Core
+# O2OA Web Client
 
 [![Build Status](https://travis-ci.org/mootools/mootools-core.png?branch=master)](https://travis-ci.org/mootools/mootools-core)
 
