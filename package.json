@@ -1,7 +1,7 @@
 {
   "name": "o2oa_client_web",
   "version": "1.1.7",
-  "description": "o2oa Client Web",
+  "description": "O2OA Client Web",
   "main": "o2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/huqi1980/o2oa_client_web.git"
   },
+  "keywords": [
+    "oa",
+    "office",
+    "workflow",
+    "process",
+    "cms",
+    "bpm",
+    "portal"
+  ],
   "author": "Tommy",
   "license": "AGPL-3.0",
   "bugs": {
