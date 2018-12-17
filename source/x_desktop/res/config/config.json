@@ -1,0 +1,23 @@
+{
+  "center": [
+    {
+      "port": "20030",
+      "host": ""
+    },
+    {
+      "port": "20030",
+      "host": "dev.o2server.io"
+    }
+  ],
+  "initManagerChanged": true,
+  "initManagerName": "",
+  "initManagerPassword": "",
+  "footer": "开发系统",
+  "title": "o2oa开发平台",
+  "app_protocol": "auto",
+  "loginPage": {
+    "enable": true,
+    "portal": "b82d7669-85d6-4c10-8151-c4d1f18ba6ef",
+    "page": ""
+  }
+}
