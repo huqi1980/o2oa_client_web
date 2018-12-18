@@ -6,9 +6,11 @@ install: true
 
 before_script:
   - npm install -g gulp-cli
+  - npm install -g codecov
 
 script:
   - gulp
+  - karma run
   - npm run report-coverage
 
 after_success:
