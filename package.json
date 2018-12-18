@@ -1,7 +1,7 @@
 {
-  "name": "o2oa_client_web",
+  "name": "o2oa_web",
   "version": "1.1.7",
-  "description": "O2OA Client Web",
+  "description": "O2OA Web",
   "main": "o2.js",
   "scripts": {
     "test": "gulp"

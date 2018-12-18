@@ -1,139 +1,176 @@
-# O2OA Web Client
+# O2OA Web
 
 [![Build Status](https://travis-ci.com/huqi1980/o2oa_client_web.svg?branch=master)](https://travis-ci.org/huqi1980/o2oa_client_web)
 
 ---
+O2OA
+==========
+## 简介
+O2OA 是一套现代企业级的办公平台。有以下特点\:
 
-This repository is for MooTools developers; not users.
-All users should download MooTools from [MooTools.net](http://mootools.net/download "Download MooTools")
+1. 核心代码开源
 
----
-## Contribute
+2. 全功能免费
 
-You are welcome to contribute to MooTools! What we ask of you:
+3. 私有化部署，下载软件后可以安装在自己的服务器上
 
-a. __To report a bug:__
+4. 随时随地办公，平台支持兼容HTML5的浏览器，并且开发了源生的IOS/Android应用
 
-   1. Create a [jsFiddle](http://jsfiddle.net/) with the minimal amount of code to reproduce the bug.
-   2. Create a [GitHub Issue](https://github.com/mootools/mootools-core/issues), and link to the jsFiddle.
+5. 高可扩展性，用户通过简单的学习后，可以自定义配置门户、流程应用、内容管理应用
 
-b. __To fix a bug:__
+更多的产品介绍、使用说明、下载、在线体验、API及讨论请移步至[http://o2oa.io/](http://www.o2oa.io/)
 
-   1. Clone the repo.
-   2. Add a [spec](https://github.com/Automattic/expect.js#api).
-   3. Fix the bug.
-   4. Build and run the specs.
-   5. Push to your GitHub fork.
-   6. Create Pull Request, and send Pull Request.
+![o2oa](http://muliba.u.qiniudn.com/post/20180801-225850@2x.png)
 
 
-__Do try to contribute!__ This is a community project.
+## 官方网站\:
+项目主页 : https://www.oschina.net/p/o2oa
+下载地址 : http://www.o2oa.io
+
+## 最新版本\:
+## v4 build 11.02更新内容\:
+新增功能\:
+
+1、[内容管理]增加设计元素可以拷贝粘贴的功能。
+
+2、[内容管理]增加组合框、子表单等设计元素组件。
+
+3、[企业社区]增加导航浏览模式。
+
+4、[服务管理]增加设计元素可以拷贝粘贴的功能。
+
+更新优化\:
+
+1、可以在配置中选择是否对office，pdf，text，image进行切词索引。
+
+2、优化调整切词索引中对词性的判断。
+
+3、优化钉钉,企业微信,政务钉钉中由于反复获取accessToken导致的页面响应缓慢的问题。
+
+BUG修复\:
+
+1、[内容管理]视图的分类标题无法保存的问题。
+
+2、[内容管理]修复附件无法替换的问题。
+
+3、修正office格式引起的:NoSuchMethodException: org.openxmlformats.schemas.wordprocessingml.x2006.main.impl.CTPictureBaseImpl"。
 
 
-## Building & Testing
+## v4 build 11.01更新内容\:
+新增功能\:
 
-Current build process uses [Grunt](http://github.com/gruntjs), [Grunt MooTools Packager plugin](https://github.com/ibolmo/grunt-packager), and [Karma related repos](http://github.com/karma-runner/grunt-karma).
+1、企业微信，钉钉，政务钉钉组织同步，待办消息推送，通知消息群发，移动设备页面集成。
 
-**By default**, the build process runs the tests (specs) relevant to the build. To build without testing see the `packager` build targets.
+2、新增SqlServer支持，目前可以支持一下数据库：Oracle，DB2，MySQL，Postgresql，Informix，H2(内嵌)，DM（达梦国产数据库），MS-SQLServer。
 
-### Building MooTools _With_ Compatibility
-This means `1.5.1` that is compatible with: `1.4.6`, `1.3.x`, `1.2.x`, and so on.
+3、OAuth2客户端功能优化，支持浙江CA，微信，QQ等其他OAuth认证服务。
 
-**Examples**
+4、增加消息群发功能。
 
-	grunt compat             # or
-	grunt packager:compat    # to only build the source
+5、ISO，AndroidApp端增加语音处理功能。
 
-### Building MooTools _Without_ Compatibility
-This means `1.5.1` **without** deprecated code in `1.4.6`, `1.3.x`, `1.2.x`, and so on.
+6、ISO，AndroidApp端增加AI自动处理功能。
 
-``` js
-'Proceed at your own risk'
-See the changelog or the blog related to each version for migrating your code.
-```
+7、启用新域名o2oa.net。
 
-**Examples**
+8、增加登录页面定制功能，现在可以通过门户定制登录页面了。
 
-	grunt nocompat           # or
-	grunt packager:nocompat  # to only build the source
+更新优化\:
 
+1、支持金山WPS。
 
-### Advanced Building and Testing
-See the [Gruntfile](https://github.com/mootools/mootools-core/blob/master/Gruntfile.js) and [MooTools packager](https://github.com/ibolmo/grunt-mootools-packager) for further options.
+2、统计中数据量导致的新能下降。
 
-**Examples**
+3、群组(Group)支持组织成员，可以统一翻译成人员。
 
-	# with compat
-	grunt compat --file=Function    # builds with only Core/Function and dependencies, then tests against specs in Specs/Core/Function
-	grunt compat --module=Class     # tests against all specs in the Specs/Class *folder* (use --file to limit the build)
+4、增加个人的主身份设置，当不指名身份时可以自动取到主身份。
 
-	# without compat
-	grunt nocompat --file=Function  # builds with only Core/Function and dependencies, then tests against specs in Specs/Core/Function
-	grunt nocompat --module=Class   # tests against all specs in the Specs/Class *folder* (use --file to limit the build)
+5、用户可以自行绑定微信,通过微信扫码登录。
 
-#### Removing Other Packager Blocks
-You'll need to add a specific task to the Gruntfile. See [packager's documentation](https://github.com/ibolmo/grunt-mootools-packager) for more examples.
+6、[信息管理]对信息文档查询效率源码级优化。
 
-### Testing locally
+BUG修复\:
 
-I you want to test your local repo you need just some small steps. Follow these in order:
+1、会议管理字段超长导致的错误。
 
-    $ git clone https://github.com/mootools/mootools-core  # clone the MooTools repo
-    $ cd mootools-core                                     # get into the directory
-    $ npm install                                          # install de testing tools
-    $ `npm bin`/grunt test                                 # run the specs!
+2、无标题流程消息提醒显示空字符串。
+
+3、脚本编辑器在同时打开多个窗口情况无法正常保存。
+
+4、修改组织同步触发机制，现在可以通过cron表达式定制运行时间。
+
+5、[信息管理]修复数据字典无法复制的问题以及分类显示的错误。
+
+6、Office控件代码修正。
 
 
-To test a build in a local browser, you can run the `:dev` target of that build to start a test server at `http://localhost:9876/` and point your browser to it. When you're done testing, pressing `Ctrl+c` in the window running the grunt process should stop the server.
+## v4 build 09.21更新内容\:
+新增功能\:
 
-Example:
+1、增加手写签批功能，支持在线手写签批，录音。
 
-	$ `npm bin`/grunt compat:dev
+2、增加全文搜索功能。支持pdf，.doc，.docx，.ppt，.pptx，.xls，.xlsx内容的全文检索。
 
-If the log is too long, or if you want to store it in a file you can do:
+3、OAuth客户端功能，支持微信等其他OAuth认证服务。
 
-    $ grunt > logs.txt   # This will create a new file called logs.txt in the local directory
+4、[汇报管理]添加手工漏发检测功能。
 
-### Testing on Travis & Sauce Labs
+更新优化\:
 
-Every new Build and Pull Request is now tested on [Travis](https://travis-ci.org/) and [Sauce Labs](https://saucelabs.com/). You can also open your own free account on [Travis](https://travis-ci.org/) and [Sauce Labs](https://saucelabs.com/) to test new code ideas there.
+1、更新统计展现功能，支持饼图，柱状图，折线图，支持行列转换。
 
-[Travis](https://travis-ci.org/) testing uses [PhantomJS](http://phantomjs.org/) which is a headless browser. When connected to [Sauce Labs](https://saucelabs.com/) then it is possible to choose any number of [different Browsers and Platforms](https://saucelabs.com/platforms). You will need in this case to change the login key so it will match your account.
+2、统计功能，可以源于不同试图的列进行合并统计。
 
-To add new Browsers in [Sauce Labs](https://saucelabs.com/) testing you can make changes to __[Grunt/options/browsers.json](Grunt/options/browsers.json)__:
+3、优化日程管理提醒不及时的问题
 
- - add a new browser to the custom launchers already in the Gruntfile.
+BUG修复\:
 
-		...
-		chrome: {
-			base: 'SauceLabs',
-			platform: 'Linux',
-			browserName: 'chrome',
-		},
-		...
+1、流程重置处理人错误。
+
+2、[信息管理]修复数据型文档类型保存不正确的问题。
+
+3、[脑图]修复某些情况下脑图无法创建的问题。
 
 
- - add the chosen browser, with the correct builds to .travis.yml:
 
-		env:
-			matrix:
-				- BUILD='compat'     BROWSER='chrome'
+## v4 build 09.04更新内容\:
+新增功能\:
 
-#### Browsers, Platforms, and More
+1、电子签章支持。
 
-This test suite is ready for Travis & SauceLabs.
-You can also run locally.
+2、流程引擎增加定时节点。
 
-Support:
+3、政务钉钉支持，可以同步政务钉钉的人员，组织。
 
- - IE
- - Edge
- - Firefox
- - Safari
- - Chrome
- - Opera
- - PhantomJS (headless browser)
+4、增加行政区划组件。
 
-## More Information
+5、[社区应用]添加调整主贴版块的服务。
 
-[See the MooTools Wiki for more information](http://github.com/mootools/mootools-core/wikis)
+更新优化\:
+
+1、视图统计代码优化，提升统计查询效率。
+
+2、优化待办已办查询，TaskCompleted 增加 latest。
+
+3、流程引擎底层优化，修改PorcessPlatform实现的aeiObjects。
+
+BUG修复\:
+
+1、应用导入导出错误。
+
+2、[信息管理]修复CMS_Review自动同步更新的问题
+
+3、[信息管理]修复序列保存时为空的问题
+
+4、修正移动端APP信息管理会把数据类的信息读取出来的问题
+
+## 授权协议
+
+o2oa软件遵守双重协议，一个是AGPL授权协议，一个是商用授权协议。
+
+1、o2oa是开源软件，您可以修改源码及免费使用；这时需遵守AGPL协议。
+
+2、当使用者使用o2oa软件提供收费服务，或者对o2oa进行分发、销售时需进行商业授权。具体请查看：[http://www.o2oa.io/product.html](http://www.o2oa.io/product.html)。
+
+3、使用者下载本软件即表示愿遵守此项协议。
+
