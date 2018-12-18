@@ -4,7 +4,10 @@
 [![codecov](https://codecov.io/gh/huqi1980/o2oa_client_web/branch/master/graph/badge.svg)](https://codecov.io/gh/huqi1980/o2oa_client_web)
 [![AGPL](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/huqi1980/o2oa_client_web)
 [![code-size](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/huqi1980/o2oa_client_web)
-
+[![release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/huqi1980/o2oa_client_web)
+[![release](https://img.shields.io/github/package-json/v/badges/shields.svg)](https://github.com/huqi1980/o2oa_client_web)
+[![release](https://img.shields.io/github/tag/expressjs/express.svg)](https://github.com/huqi1980/o2oa_client_web)
+[![release](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/huqi1980/o2oa_client_web)
 ---
 O2OA
 ==========
