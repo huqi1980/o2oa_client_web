@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/huqi1980/o2oa_client_web.svg?branch=master)](https://travis-ci.org/huqi1980/o2oa_client_web)
 [![codecov](https://codecov.io/gh/huqi1980/o2oa_client_web/branch/master/graph/badge.svg)](https://codecov.io/gh/huqi1980/o2oa_client_web)
-[![codecov](https://img.shields.io/aur/license/:packageName.svg)](https://codecov.io/gh/huqi1980/o2oa_client_web)
+[![codecov](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/huqi1980/o2oa_client_web)
 ---
 O2OA
 ==========
