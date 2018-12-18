@@ -6,6 +6,7 @@ install: true
 
 before_script:
   - npm install -g gulp-cli
+  - npm i -g karma-cli
   - npm install -g codecov
 
 script:
