@@ -24,7 +24,7 @@ o2.addReady(function(){
     }
     if (errorNode) errorNode.destroy();
 
-    COMMON.setContentPath("/x_desktop");
+    COMMON.setContentPath(".");
     //COMMON.AjaxModule.load("ie_adapter", function(){
         o2.load("res/framework/mootools/plugin/mBox.Notice.js", function(){
             o2.load("res/framework/mootools/plugin/mBox.Tooltip.js", function(){

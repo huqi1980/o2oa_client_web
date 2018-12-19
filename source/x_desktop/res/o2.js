@@ -147,21 +147,23 @@
     var _frameworks = {
         "o2.core": ["/o2_core/o2/o2.core.js"],
         "o2.more": ["/o2_core/o2/o2.more.js"],
-        "jquery": ["/x_desktop/res/framework/jquery/jquery.min.js"],
-        "mootools": ["/x_desktop/res/framework/mootools/mootools-1.6.0_all.js"],
-        "ckeditor": ["/x_desktop/res/framework/htmleditor/ckeditor/ckeditor.js"],
-        "raphael": ["/x_desktop/res/framework/raphael/raphael.js"],
-        "d3": ["/x_desktop/res/framework/d3/d3.js"],
-        "ace": ["/x_desktop/res/framework/ace/src-min-noconflict/ace.js","/x_desktop/res/framework/ace/src-min-noconflict/ext-language_tools.js"],
-        "mwf": "/x_desktop/res/mwf4/MWF.js",
-        "JSBeautifier": ["/x_desktop/res/framework/JSBeautifier/beautify.js"],
-        "JSBeautifier_css": ["/x_desktop/res/framework/JSBeautifier/beautify-css.js"],
-        "JSBeautifier_html": ["/x_desktop/res/framework/JSBeautifier/beautify-html.js"]
+        "jquery": ["res/framework/jquery/jquery.min.js"],
+        "mootools": ["res/framework/mootools/mootools-1.6.0_all.js"],
+        "ckeditor": ["res/framework/htmleditor/ckeditor/ckeditor.js"],
+        "raphael": ["res/framework/raphael/raphael.js"],
+        "d3": ["res/framework/d3/d3.js"],
+        "ace": ["res/framework/ace/src-min-noconflict/ace.js","/x_desktop/res/framework/ace/src-min-noconflict/ext-language_tools.js"],
+        "mwf": "res/mwf4/MWF.js",
+        "JSBeautifier": ["res/framework/JSBeautifier/beautify.js"],
+        "JSBeautifier_css": ["res/framework/JSBeautifier/beautify-css.js"],
+        "JSBeautifier_html": ["res/framework/JSBeautifier/beautify-html.js"]
     };
     var _loaded = {};
     var _loadedCss = {};
 
     var _loadSingle = function(url, callback, reload, doc){
+        console.log(url);
+        //console.log("Hello Karma");
         var addr_uri = _frameworks[url] || url;
         if (!_debug) if (addr_uri.indexOf("framework")===-1) addr_uri = addr_uri.replace(/\.js/, ".min.js");
         addr_uri = (addr_uri.indexOf("?")!==-1) ? addr_uri+"&v="+o2.version.v : addr_uri+"?v="+o2.version.v;

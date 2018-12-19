@@ -136,7 +136,7 @@ COMMON.version = "1.1.7";
 
 COMMON.setContentPath = function(path){
     COMMON.contentPath = path;
-    window.CKEDITOR_BASEPATH = path+"/res/framework/htmleditor/ckeditor/";
+    window.CKEDITOR_BASEPATH = path+"res/framework/htmleditor/ckeditor/";
     COMMON.AjaxModule.init();
 };
 
